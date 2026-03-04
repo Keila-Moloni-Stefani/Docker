@@ -1,0 +1,8 @@
+# Dockerfile.nginx - Load Balancer
+FROM nginx:latest
+
+# Remove config padrão e copia essa
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 4500
